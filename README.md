@@ -1,50 +1,85 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TodoReactTS
 
-Currently, two official plugins are available:
+Este repositorio contiene un proyecto de una aplicación de lista de tareas (Todo) creado con **React** y **TypeScript**. Este proyecto es parte de mi proceso de aprendizaje de TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descripción del Proyecto
 
-## Expanding the ESLint configuration
+La aplicación TodoReactTS permite a los usuarios:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Añadir nuevas tareas a una lista.
+- Eliminar tareas existentes.
+- Visualizar las tareas en una lista.
 
-- Configure the top-level `parserOptions` property like this:
+## Estructura del Proyecto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+El proyecto está organizado de la siguiente manera:
+
+```
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ListaTareas.tsx
+│   │   ├── Tarea.tsx
+│   │   └── TodoApp.tsx
+│   ├── main.tsx
+│   ├── styles.css
+│   ├── vite-env.d.ts
+│   ├── eslint.config.js
+│   ├── index.html
+│   └── vite.config.ts
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Instalación y Uso
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para correr este proyecto en tu máquina local, sigue estos pasos:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clona el repositorio:**
+
+   ```bash
+   git clone https://github.com/tu_usuario/TodoReactTS.git
+   ```
+
+2. **Instala las dependencias:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Inicia el servidor de desarrollo:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Abre la aplicación en tu navegador:**
+
+   Ve a `http://localhost:3000` para ver la aplicación en acción.
+
+## Herramientas y Tecnologías Utilizadas
+
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **TypeScript**: Un superconjunto de JavaScript que añade tipos estáticos.
+- **Vite**: Herramienta de desarrollo rápido que proporciona una experiencia de desarrollo más rápida y ligera.
+- **ESLint**: Herramienta para asegurar la calidad del código.
+
+## Aprendizajes y Desafíos
+
+Este proyecto ha sido una gran oportunidad para aplicar los conceptos aprendidos en TypeScript y comprender mejor cómo tipar componentes y estados en React. Algunos desafíos que encontré incluyen:
+
+- Tipar correctamente las propiedades de los componentes.
+- Manejar el estado en componentes funcionales con TypeScript.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, ¡eres bienvenido/a! Puedes hacer un fork del repositorio, crear una rama, realizar tus cambios, y enviar un pull request.
+
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de arielbrit@gmail.com
+
+
